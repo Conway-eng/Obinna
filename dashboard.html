@@ -8,47 +8,72 @@
     <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Bots</a></li>
-                <li><a href="#">Deployments</a></li>
-                <li><a href="#">Settings</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="bot-deployments">
-            <h2>Bot Deployments</h2>
-            <div class="deployment-cards">
-                <div class="card">
-                    <h3>Bot 1</h3>
-                    <p>Status: <span class="status online">Online</span></p>
-                    <p>Deployment: <span class="deployment successful">Successful</span></p>
-                    <button>View Details</button>
+    <div class="container">
+        <header>
+            <h1>Bot Deployment Dashboard</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Bots</a></li>
+                    <li><a href="#">Deployments</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="stats">
+                <div class="stat-card">
+                    <h2>Total Bots</h2>
+                    <p>10</p>
                 </div>
-                <div class="card">
-                    <h3>Bot 2</h3>
-                    <p>Status: <span class="status offline">Offline</span></p>
-                    <p>Deployment: <span class="deployment failed">Failed</span></p>
-                    <button>View Details</button>
+                <div class="stat-card">
+                    <h2>Active Deployments</h2>
+                    <p>5</p>
                 </div>
-                <div class="card">
-                    <h3>Bot 3</h3>
-                    <p>Status: <span class="status online">Online</span></p>
-                    <p>Deployment: <span class="deployment pending">Pending</span></p>
-                    <button>View Details</button>
+                <div class="stat-card">
+                    <h2>Failed Deployments</h2>
+                    <p>2</p>
                 </div>
-            </div>
-        </section>
-        <section class="bot-performance">
-            <h2>Bot Performance</h2>
-            <div class="performance-graph">
-                <canvas id="performance-chart"></canvas>
-            </div>
-        </section>
-    </main>
+            </section>
+            <section class="bot-list">
+                <h2>Bot List</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Bot Name</th>
+                            <th>Status</th>
+                            <th>Deployment Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Bot 1</td>
+                            <td>Online</td>
+                            <td>Successful</td>
+                            <td><button>View Details</button></td>
+                        </tr>
+                        <tr>
+                            <td>Bot 2</td>
+                            <td>Offline</td>
+                            <td>Failed</td>
+                            <td><button>View Details</button></td>
+                        </tr>
+                        <tr>
+                            <td>Bot 3</td>
+                            <td>Online</td>
+                            <td>Pending</td>
+                            <td><button>View Details</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="deployment-graph">
+                <h2>Deployment Graph</h2>
+                <canvas id="deployment-chart"></canvas>
+            </section>
+        </main>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="dashboard.js"></script>
 </body>
