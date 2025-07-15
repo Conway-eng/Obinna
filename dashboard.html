@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Deployment Dashboard</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Bots</a></li>
+                <li><a href="#">Deployments</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="bot-deployments">
+            <h2>Bot Deployments</h2>
+            <div class="deployment-cards">
+                <div class="card">
+                    <h3>Bot 1</h3>
+                    <p>Status: <span class="status online">Online</span></p>
+                    <p>Deployment: <span class="deployment successful">Successful</span></p>
+                    <button>View Details</button>
+                </div>
+                <div class="card">
+                    <h3>Bot 2</h3>
+                    <p>Status: <span class="status offline">Offline</span></p>
+                    <p>Deployment: <span class="deployment failed">Failed</span></p>
+                    <button>View Details</button>
+                </div>
+                <div class="card">
+                    <h3>Bot 3</h3>
+                    <p>Status: <span class="status online">Online</span></p>
+                    <p>Deployment: <span class="deployment pending">Pending</span></p>
+                    <button>View Details</button>
+                </div>
+            </div>
+        </section>
+        <section class="bot-performance">
+            <h2>Bot Performance</h2>
+            <div class="performance-graph">
+                <canvas id="performance-chart"></canvas>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>
