@@ -3,11 +3,27 @@ body {
     background-color: #f0f0f0;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+    font-weight: bold;
+    font-size: 24px;
 }
 
 header nav ul {
@@ -15,7 +31,6 @@ header nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: space-between;
 }
 
 header nav ul li {
@@ -23,82 +38,50 @@ header nav ul li {
 }
 
 header nav a {
-    color: #fff;
     text-decoration: none;
+    color: #337ab7;
 }
 
-main {
+.stats {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
+    justify-content: space-between;
+    margin-top: 20px;
 }
 
-.bot-deployments {
+.stat-card {
     background-color: #fff;
-    padding: 2rem;
+    padding: 20px;
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
+    width: calc(33.33% - 20px);
 }
 
-.deployment-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.stat-card h2 {
+    font-weight: bold;
+    font-size: 18px;
 }
 
-.card {
-    background-color: #fff;
-    padding: 1rem;
+.bot-list {
+    margin-top: 20px;
+}
+
+.bot-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.bot-list th, .bot-list td {
     border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 1rem;
-    width: calc(33.33% - 2rem);
+    padding: 10px;
+    text-align: left;
 }
 
-.status {
-    font-weight: bold;
-    color: #fff;
-    padding: 0.5rem;
-    border-radius: 5px;
+.deployment-graph {
+    margin-top: 20px;
 }
 
-.online {
-    background-color: #2ecc71;
-}
-
-.offline {
-    background-color: #e74c3c;
-}
-
-.deployment {
-    font-weight: bold;
-    color: #fff;
-    padding: 0.5rem;
-    border-radius: 5px;
-}
-
-.successful {
-    background-color: #2ecc71;
-}
-
-.failed {
-    background-color: #e74c3c;
-}
-
-.pending {
-    background-color: #f1c40f;
-}
-
-.performance-graph {
+#deployment-chart {
     width: 100%;
     height: 400px;
-    background-color: #fff;
-    padding: 2rem;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
